@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "播放清單輸出 Url Json",
+  "description": "將播放清單的影片，輸出 Url Json",
+  "version": "1.0.0",
+  "icons": {
+    "16": "youtube.png",
+    "48": "youtube.png",
+    "128": "youtube.png"
+  },
+  "page_action": {
+    "default_icon": "youtube.png",
+    "default_popup": "popup.html",
+    "default_title": "輸出 Url Json"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/playlist?list=*"
+      ],
+      "js": [
+        "execute.js"
+      ]
+    }
+  ]
+}
