@@ -1,5 +1,8 @@
 body {
-  width: 5rem;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+#download {
+  width: 45px;
 }

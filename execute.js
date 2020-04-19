@@ -6,11 +6,11 @@ function onMessage(messageObj) {
 
 function save(data, filename) {
   if (!data) {
-    console.error('Console.save: No data');
+    console.error('No data');
     return;
   }
   if (!filename) {
-    filename = 'console.json';
+    filename = 'url.json';
   }
   if (typeof data === "object") {
     data = JSON.stringify(data, undefined, 4);
